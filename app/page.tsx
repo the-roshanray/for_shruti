@@ -53,7 +53,7 @@ export default function ShrutiLovePage() {
     },
     {
       id: 2,
-      url: "/IMG_0235.jpg",
+      url: "/IMG_0235.JPG",
       caption: "You light up my world ✨",
     },
     {
