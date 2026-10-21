@@ -269,7 +269,7 @@ export default function ShrutiSorryPage() {
     <div className="relative flex min-h-screen items-center justify-center overflow-x-hidden bg-gradient-to-br from-slate-900 via-purple-800 to-rose-600 px-2 py-4 sm:px-4 sm:py-6 md:px-6 lg:px-8 lg:py-8">
       {/* Hidden Audio Player */}
       <audio ref={audioRef} loop>
-        <source src="/Barbaad.mp3" type="audio/mpeg" />
+        <source src="/Ek Din Teri Raahon.mp3" type="audio/mpeg" />
       </audio>
 
       {/* Animated Background */}
