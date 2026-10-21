@@ -31,7 +31,7 @@ type ImageItem = {
   date?: string;
 };
 
-export default function ShrutiLovePage() {
+export default function ShrutiSorryPage() {
   const [message, setMessage] = useState("");
   const [noPosition, setNoPosition] = useState({ x: 0, y: 0 });
   const [hearts, setHearts] = useState<HeartAnimation[]>([]);
@@ -49,36 +49,36 @@ export default function ShrutiLovePage() {
     {
       id: 1,
       url: "/IMG-20250707-WA0002.jpg",
-      caption: "Our first smile together 😊",
+      caption: "The smile I never want to lose 😊",
     },
     {
       id: 2,
-      url: "/IMG_0235.JPG",
+      url: "/IMG_0235.jpeg",
       caption: "You light up my world ✨",
     },
     {
       id: 3,
-      url: "/IMG_0236.JPG",
+      url: "/IMG_0236.jpeg",
       caption: "Every moment with you is magic 💫",
     },
     {
       id: 4,
       url: "/IMG-20260720-WA0000.jpg",
-      caption: "My favorite person 💕",
+      caption: "My favorite person, always 💕",
     },
   ];
 
   const noMessages = [
-    "Are you sure? 🥺",
-    "Think again! 💕",
-    "Don't break my heart! 💔",
-    "I'll keep asking! 😤",
-    "You can't escape! 🏃",
-    "I love you! ❤️",
-    "Just say yes! 🙏",
-    "My heart is yours! 💝",
-    "Please? 🥹",
-    "Forever waiting! ⏳",
+    "Still upset? 🥺",
+    "I didn't mean it! 💔",
+    "Please hear me out 🙏",
+    "I'll make it up to you 💕",
+    "Give me one chance? 🥹",
+    "I'm really sorry! 😢",
+    "You mean everything to me 💝",
+    "I'll do better, I promise ✨",
+    "Don't walk away... 🚶",
+    "Forever yours, always ⏳",
   ];
 
   useEffect(() => {
@@ -217,8 +217,8 @@ export default function ShrutiLovePage() {
     }
   };
 
-  const handleYesClick = () => {
-    setMessage("Yay! ❤️ I knew it! You just made my day! ✨");
+  const handleForgiveClick = () => {
+    setMessage("Thank you! ❤️ You just made my whole world brighter! ✨");
     setShowCelebration(true);
 
     // Create explosion of hearts
@@ -262,11 +262,11 @@ export default function ShrutiLovePage() {
     if (noClicks < noMessages.length) {
       return noMessages[noClicks];
     }
-    return "Just say yes! 💕";
+    return "Please forgive me? 💕";
   };
 
   return (
-    <div className="relative flex min-h-screen items-center justify-center overflow-x-hidden bg-gradient-to-br from-purple-900 via-pink-600 to-red-500 px-2 py-4 sm:px-4 sm:py-6 md:px-6 lg:px-8 lg:py-8">
+    <div className="relative flex min-h-screen items-center justify-center overflow-x-hidden bg-gradient-to-br from-slate-900 via-purple-800 to-rose-600 px-2 py-4 sm:px-4 sm:py-6 md:px-6 lg:px-8 lg:py-8">
       {/* Hidden Audio Player */}
       <audio ref={audioRef} loop>
         <source src="/Barbaad.mp3" type="audio/mpeg" />
@@ -329,9 +329,9 @@ export default function ShrutiLovePage() {
           <div className="mb-8">
             <h1 className="relative mb-4 animate-pulse-slow text-3xl font-bold text-white sm:text-4xl md:text-5xl lg:text-6xl">
               <span className="relative inline-block">
-                💕 Shruti 💕
+                🙏 Sorry, Shruti 🙏
                 <span className="absolute inset-0 text-pink-300 blur-sm animate-pulse">
-                  💕 Shruti 💕
+                  🙏 Sorry, Shruti 🙏
                 </span>
               </span>
             </h1>
@@ -341,35 +341,36 @@ export default function ShrutiLovePage() {
               <Heart className="w-8 h-8 text-rose-400 animate-pulse delay-200" />
             </div>
 
-            {/* Purposing Line with Gradient */}
+            {/* Apology Line with Gradient */}
             <div className="mb-6 rounded-2xl border border-white/20 bg-gradient-to-br from-white/10 to-pink-500/10 p-4 backdrop-blur-sm sm:p-6">
               <p className="text-lg font-semibold italic text-white/95 sm:text-xl md:text-2xl">
-                "This page runs on code, but my love for you runs on forever.
+                &quot;This page runs on code, but my apology comes straight from
+                the heart.
                 <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-pink-200 via-rose-200 to-pink-200 animate-pulse-slow">
-                  All I need is one 'Yes' to make it real."
+                  All I need is one &apos;Yes&apos; to make things right.&quot;
                 </span>
               </p>
               <div className="flex justify-center gap-2 mt-3">
                 <span className="text-3xl animate-bounce">🌹</span>
-                <span className="text-3xl animate-bounce delay-100">💕</span>
+                <span className="text-3xl animate-bounce delay-100">💔</span>
                 <span className="text-3xl animate-bounce delay-200">✨</span>
               </div>
             </div>
 
             <p className="text-xl font-semibold text-white/90 sm:text-2xl md:text-3xl">
-              Will You Be My Valentine? 💝
+              Will You Forgive Me? 💝
             </p>
             <p className="mt-2 text-base sm:text-lg text-white/70 italic">
-              {`"Every love story is beautiful, but ours is my favorite" ✨`}
+              {`"I know I messed up, and I'm truly sorry" 🥺`}
             </p>
           </div>
 
-          {/* Image Gallery Section with Masonry Layout */}
+          {/* Image Gallery Section */}
           <div className="mb-8">
             <div className="flex items-center justify-center gap-2 mb-4">
               <ImageIcon className="w-6 h-6 text-white/80 animate-pulse" />
               <h3 className="text-xl font-semibold text-white">
-                Our Beautiful Memories
+                Memories I Never Want to Lose
               </h3>
               <ImageIcon className="w-6 h-6 text-white/80 animate-pulse delay-100" />
             </div>
@@ -387,7 +388,6 @@ export default function ShrutiLovePage() {
                     src={image.url}
                     alt={image.caption}
                     className="h-44 w-full object-cover transition-transform duration-500 group-hover:scale-110 sm:h-48"
-                   
                     width={400}
                     height={300}
                     loading="eager"
@@ -396,7 +396,6 @@ export default function ShrutiLovePage() {
                     <p className="text-white text-sm font-medium text-center transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                       {image.caption}
                     </p>
-                  
                   </div>
                   <div className="absolute top-2 right-2 bg-pink-500/80 rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-75 group-hover:scale-100">
                     <ZoomIn className="w-4 h-4 text-white" />
@@ -416,11 +415,11 @@ export default function ShrutiLovePage() {
           {/* Buttons with Enhanced Interaction */}
           <div className="relative mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <button
-              onClick={handleYesClick}
+              onClick={handleForgiveClick}
               className="group relative w-full max-w-[280px] overflow-hidden rounded-2xl bg-gradient-to-r from-pink-500 to-rose-500 px-6 py-3 text-base font-bold text-white shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:shadow-2xl sm:w-auto sm:px-8 sm:py-4 sm:text-lg"
             >
               <span className="relative z-10 flex items-center gap-2">
-                Yes, Absolutely! 💖
+                Yes, I Forgive You 💖
                 <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-rose-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -456,8 +455,8 @@ export default function ShrutiLovePage() {
           {showHint && !message && (
             <div className="mt-4 animate-fade-in-up">
               <p className="text-sm text-white/80 bg-white/10 rounded-full px-4 py-2 inline-block backdrop-blur-sm border border-white/20">
-                💡 The &quot;No&quot; button is playing hard to get... try
-                catching it!
+                💡 The &quot;No&quot; button isn&apos;t ready to forgive yet...
+                try catching it!
               </p>
             </div>
           )}
@@ -488,7 +487,7 @@ export default function ShrutiLovePage() {
             <div className="mt-6 animate-fade-in-up">
               <div className="flex justify-center gap-4 flex-wrap">
                 <span className="text-5xl animate-bounce">🎉</span>
-                <span className="text-5xl animate-bounce delay-100">🥳</span>
+                <span className="text-5xl animate-bounce delay-100">🥹</span>
                 <span className="text-5xl animate-bounce delay-200">💕</span>
                 <span className="text-5xl animate-bounce delay-300">✨</span>
                 <span className="text-5xl animate-bounce delay-400">🎊</span>
@@ -500,7 +499,7 @@ export default function ShrutiLovePage() {
 
         {/* Footer with Animated Text */}
         <p className="text-center text-white/60 text-sm mt-6 animate-pulse-slow">
-          Made with 💖 just for you, Shruti
+          Made with 💖 and a thousand apologies, just for you, Shruti
         </p>
       </div>
 
